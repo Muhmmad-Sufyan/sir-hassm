@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sir Hassam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white min-h-screen w-full">
+    <div style="background-image: url(./hero.png);" class="border-b-2 border-b-[#c2ff00] pb-10">
+
+        <header class='flex justify-between lg:mx-20 relative mx-5 md:mx-16   items-center md:pt-9 pt-6 '>
+            <div>
+                <h1 class='font-bold text-2xl'><span style=' color: #c2ff00' class=''>H</span>NWL</h1>
+            </div>
+            <ul class='md:flex hidden  items-center lg:gap-20 md:gap-10 pt-3 '>
+                <li class='text-[#c2ff00]'>Home</li>
+                <li class='hover:text-[#c2ff00]'>Work</li>
+                <li class='hover:text-[#c2ff00]'>Services</li>
+                <li class='hover:text-[#c2ff00]'>Contact us</li>
+            </ul>
+            <div class='md:flex hidden'>
+                #Success_Rules
+            </div>
+
+            <div class="md:hidden block">
+
+                <i class='bx bx-menu md:hidden block text-xl' style='color:#c2ff00'></i>
+                <ul id="sub-menu"
+                    class='absolute md:hidden left-0  flex text-nowrap gap-10 w-1/2 mx-auto items-center lg:gap-20 md:gap-10 pt-3 '>
+                    <li class='text-[#c2ff00]'>Home</li>
+                    <li class='hover:text-[#c2ff00]'>Work</li>
+                    <li class='hover:text-[#c2ff00]'>Services</li>
+                    <li class='hover:text-[#c2ff00]'>Contact us</li>
+                </ul>
+            </div>
+
+        </header>
+        <div class="relative">
+
+            <div class="flex flex-col items-center  mt-36 justify-center ">
+                <h1 style=' color: #c2ff00' class="lg:text-5xl md:text-4xl  text-xl font-bold ">
+                    Business Growth 🚀 through Strategic
+                </h1>
+                <h2 class="lg:text-4xl md:text-3xl  text-lg font-bold mt-4">Design & Social Media</h2>
+                <h3 class="text-lg mt-4"> Trusted by 20+ Worldwide Brand</h3>
+                <button class="border-[#c2ff00] border-[1px] px-6 py-2 rounded-full mt-16">Drop Your Email</button>
+            </div>
+
+            <div class="absolute md:right-[60px] right-[10px] text-2xl top-[90px] flex flex-col gap-y-5">
+                <i class='bx bxl-youtube' style='color:#c2ff00'></i>
+                <i class='bx bxl-facebook' style='color:#c2ff00'></i>
+                <i class='bx bxl-linkedin' style='color:#c2ff00'></i>
+            </div>
+
+
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-y-5  justify-between md:mx-20 mx-10 mt-20 text-[#c2ff00]">
+            <h1 class="md:text-start   text-center ">Munemmad kassom <br>
+                assassarris</h1>
+            <h1 class="text-center md:w-[36%] w-full">Brand identity & Packaging Desioner | Social Media
+                Mangement Served over Word wide Brande</h1>
+        </div>
+    </div>
+
+    <div class="border-b-2 border-b-[#c2ff00] pb-10 md:px-20 px-2 mt-20">
+        <div class="flex justify-between items-center">
+            <h1 class="lg:text-3xl md:text-2xl text-xl font-bold"><span class="text-[#c2ff00]">Previous</span> Work</h1>
+            <div class="flex space-x-3">
+                <!-- Circle 1 -->
+                <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] bg-[#c2ff00] rounded-full cursor-pointer"
+                    onclick="goToSlide(0)"></div>
+                <!-- Circle 2 -->
+                <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                    onclick="goToSlide(1)"></div>
+                <!-- Circle 3 -->
+                <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                    onclick="goToSlide(2)"></div>
+                <!-- Circle 4 -->
+                <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                    onclick="goToSlide(3)"></div>
+                <!-- Circle 5 -->
+                <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                    onclick="goToSlide(4)"></div>
+                <!-- Circle 6 -->
+                <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                    onclick="goToSlide(5)"></div>
+                <!-- Circle 7 -->
+                <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                    onclick="goToSlide(6)"></div>
+            </div>
+        </div>
+
+        <div class="carousel-container mt-10">
+            <div id="carousel" class="carousel">
+                <!-- Slide 1 -->
+                <div class="carousel-item flex gap-x-10 justify-between md:flex-row flex-col">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full" alt="">
+                </div>
+                <div class="carousel-item flex gap-x-10 justify-between md:flex-row flex-col">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full" alt="">
+                </div>
+                <div class="carousel-item flex gap-x-10 justify-between md:flex-row flex-col">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full" alt="">
+                </div>
+                <div class="carousel-item flex gap-x-10 justify-between md:flex-row flex-col">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full" alt="">
+                </div>
+                <div class="carousel-item flex gap-x-10 justify-between md:flex-row flex-col">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full" alt="">
+                </div>
+                <div class="carousel-item flex gap-x-10 justify-between md:flex-row flex-col">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full" alt="">
+                </div>
+                <div class="carousel-item flex gap-x-10 justify-between md:flex-row flex-col">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full mb-4 md:mb-0" alt="">
+                    <img src="./hassan.jpg" class="md:w-1/3 w-full" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="border-b-2 border-b-[#c2ff00] pb-10 ">
+
+        <div class="mx-20 my-20 flex md:flex-row flex-col gap-y-5 justify-between items-center">
+            <div class="flex-col flex lg:w-[70%]">
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold lg:w-[40%] text-white leading-tight">
+                    Clear <span class="text-[#c2ff00] mb-10">your<br class="hidden md:block">mind about</span><br
+                        class="hidden md:block">
+                    What
+                    <span class="text-[#c2ff00] pb-2">you are <br class="hidden md:block"> doing and</span><br
+                        class="hidden md:block">
+                    Why
+                    <span class="text-[#c2ff00] pb-2">you are<br class="hidden md:block">doing.</span>
+                </h1>
+
+                <p class="text-xl md:text-start text-center mt-8">-Hassam</p>
+            </div>
+            <div class="relative">
+                <div class="bg-[#c2ff00] rounded-full p-2">
+                    <img class="rounded-full md:w-80 md:h-80 object-cover" src="./hassan.jpg" alt="Hassam">
+                </div>
+                <div class="absolute inset-0 border-8 border-black rounded-full -z-10"></div>
+            </div>
+        </div>
+    </div>
+    <!-- new start -->
+    <div style="background-image: url(./pac.png);" class="border-b-2 border-b-[#c2ff00] py-10 ">
+        <div class="mt-10">
+
+            <h1 class="lg:text-4xl md:text-3xl text-2xl text-[#c2ff00] font-bold text-center">Social Media Management
+            </h1>
+            <h2 class="lg:text-3xl md:text-2xl text-xl font-bold  text-center">Package</h2>
+        </div>
+        <div class="flex flex-col items-center">
+            <button class="border-[#c2ff00] border-[1px] px-6 py-2 rounded-full mt-10">MOST POPULAR</button>
+
+        </div>
+        <div class="flex justify-center mt-10 gap-10 flex-wrap">
+            <div class="flex flex-col justify-between h-96 w-56 py-2 border-2 border-[#c2ff00] rounded-xl">
+                <h1 class="text-center text-xl">Basic</h1>
+                <h1 class="text-center">$299</h1>
+            </div>
+            <div class="flex flex-col justify-between h-96 w-56 py-2 border-2 border-[#c2ff00] rounded-xl">
+                <h1 class="text-center text-xl">STANDARD</h1>
+                <h1 class="text-center">$399</h1>
+            </div>
+            <div class="flex flex-col justify-between h-96 w-56 py-2 border-2 border-[#c2ff00] rounded-xl">
+                <h1 class="text-center text-xl">PREMIUM</h1>
+                <h1 class="text-center">$499</h1>
+            </div>
+        </div>
+        <div class="mt-32">
+
+            <h1 class="lg:text-4xl md:text-3xl text-2xl text-[#c2ff00] font-bold text-center">Satisfied Client’s
+            </h1>
+            <h2 class="lg:text-3xl md:text-2xl text-xl font-bold  text-center">Feedback</h2>
+        </div>
+
+
+        <!--HTML CODE-->
+        <div class="flex justify-center flex-wrap mt-10 gap-x-10">
+            <img src="./hassan.jpg" alt=""
+                class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform hover:scale-110 w-44">
+            <img src="./hassan.jpg" alt=""
+                class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform hover:scale-110 w-44">
+            <img src="./hassan.jpg" alt=""
+                class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform lg:scale-125 hover:scale-110 w-44">
+            <img src="./hassan.jpg" alt=""
+                class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform hover:scale-110 w-44">
+            <img src="./hassan.jpg" alt=""
+                class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform hover:scale-110 w-44">
+        </div>
+        <div class="flex space-x-3 justify-center mt-10">
+            <!-- Circle 1 -->
+            <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] bg-[#c2ff00] rounded-full cursor-pointer"
+                onclick="goToSlide(0)"></div>
+            <!-- Circle 2 -->
+            <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                onclick="goToSlide(1)"></div>
+            <!-- Circle 3 -->
+            <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                onclick="goToSlide(2)"></div>
+            <!-- Circle 4 -->
+            <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                onclick="goToSlide(3)"></div>
+            <!-- Circle 5 -->
+            <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                onclick="goToSlide(4)"></div>
+            <!-- Circle 6 -->
+            <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                onclick="goToSlide(5)"></div>
+            <!-- Circle 7 -->
+            <div class="circle w-3 h-3 border-[1px] border-[#c2ff00] rounded-full cursor-pointer"
+                onclick="goToSlide(6)"></div>
+        </div>
+
+
+    </div>
+
+    <div class="pb-10 md:px-20 px-2 mt-20">
+        <h1 class="text-center lg:text-5xl md:text-4xl text-3xl  font-bold"><span class="text-[#c2ff00]">Free</span>
+            Resources</h1>
+        <div class="flex  flex-wrap justify-center mt-20 gap-10">
+            <div class="bg-[#c2ff00] rounded-xl p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class="text-black text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class="text-black text-sm mt-4 px-5"> You can update logo, username, colors with just single click
+                    and 100% free copyrighted....</p>
+                <div class="text-black flex justify-between px-5 mt-4">
+                    <h1 class="text-lg">$12</h1>
+                    <button class="border-2 border-black rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-[#c2ff00] rounded-xl p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class="text-black text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class="text-black text-sm mt-4 px-5"> You can update logo, username, colors with just single click
+                    and 100% free copyrighted....</p>
+                <div class="text-black flex justify-between px-5 mt-4">
+                    <h1 class="text-lg">$12</h1>
+                    <button class="border-2 border-black rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-[#c2ff00] rounded-xl p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class="text-black text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class="text-black text-sm mt-4 px-5"> You can update logo, username, colors with just single click
+                    and 100% free copyrighted....</p>
+                <div class="text-black flex justify-between px-5 mt-4">
+                    <h1 class="text-lg">$12</h1>
+                    <button class="border-2 border-black rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-[#c2ff00] rounded-xl p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class="text-black text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class="text-black text-sm mt-4 px-5"> You can update logo, username, colors with just single click
+                    and 100% free copyrighted....</p>
+                <div class="text-black flex justify-between px-5 mt-4">
+                    <h1 class="text-lg">$12</h1>
+                    <button class="border-2 border-black rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-[#c2ff00] rounded-xl p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class="text-black text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class="text-black text-sm mt-4 px-5"> You can update logo, username, colors with just single click
+                    and 100% free copyrighted....</p>
+                <div class="text-black flex justify-between px-5 mt-4">
+                    <h1 class="text-lg">$12</h1>
+                    <button class="border-2 border-black rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-[#c2ff00] rounded-xl p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class="text-black text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class="text-black text-sm mt-4 px-5"> You can update logo, username, colors with just single click
+                    and 100% free copyrighted....</p>
+                <div class="text-black flex justify-between px-5 mt-4">
+                    <h1 class="text-lg">$12</h1>
+                    <button class="border-2 border-black rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pb-10 md:px-20 px-2 mt-20 border-y-2 border-[#c2ff00] mt-20">
+        <h1 class="text-center lg:text-5xl md:text-4xl text-3xl  font-bold"><span class="text-[#c2ff00]">Free</span>
+            Resources</h1>
+        <div class="flex  flex-wrap justify-center mt-20 gap-10">
+            <div class="bg-black rounded-xl border-2 p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class=" text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class=" text-sm mt-4 px-5"> You can update logo, username, colors with just single click and 100%
+                    free copyrighted....</p>
+                <div class=" flex justify-between px-5 mt-4">
+                    <h1 class="text-lg text-[#c2ff00]">$12</h1>
+                    <button class="border-2  rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-black rounded-xl border-2 p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class=" text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class=" text-sm mt-4 px-5"> You can update logo, username, colors with just single click and 100%
+                    free copyrighted....</p>
+                <div class=" flex justify-between px-5 mt-4">
+                    <h1 class="text-lg text-[#c2ff00]">$12</h1>
+                    <button class="border-2  rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-black rounded-xl border-2 p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class=" text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class=" text-sm mt-4 px-5"> You can update logo, username, colors with just single click and 100%
+                    free copyrighted....</p>
+                <div class=" flex justify-between px-5 mt-4">
+                    <h1 class="text-lg text-[#c2ff00]">$12</h1>
+                    <button class="border-2  rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-black rounded-xl border-2 p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class=" text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class=" text-sm mt-4 px-5"> You can update logo, username, colors with just single click and 100%
+                    free copyrighted....</p>
+                <div class=" flex justify-between px-5 mt-4">
+                    <h1 class="text-lg text-[#c2ff00]">$12</h1>
+                    <button class="border-2  rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-black rounded-xl border-2 p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class=" text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class=" text-sm mt-4 px-5"> You can update logo, username, colors with just single click and 100%
+                    free copyrighted....</p>
+                <div class=" flex justify-between px-5 mt-4">
+                    <h1 class="text-lg text-[#c2ff00]">$12</h1>
+                    <button class="border-2  rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+            <div class="bg-black rounded-xl border-2 p-2 md:w-[45%] w-[70%] lg:w-[30%] lg:h-96 h-auto">
+                <div class="rounded-xl"
+                    style="background-image: url(./hassan.jpg);width: 100%;background-repeat: no-repeat;background-size: 100% 100%;height: 200px;">
+
+                </div>
+                <h1 class=" text-2xl text-center">20+ Instagram Post Package</h1>
+                <p class=" text-sm mt-4 px-5"> You can update logo, username, colors with just single click and 100%
+                    free copyrighted....</p>
+                <div class=" flex justify-between px-5 mt-4">
+                    <h1 class="text-lg text-[#c2ff00]">$12</h1>
+                    <button class="border-2  rounded-full px-4 py-1">Buy Now</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="my-20 mx-20">
+        <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-center "><span class="text-[#c2ff00]">Meet Our</span>
+            Team</h1>
+        <div class="flex  lg:flex-row flex-col md:justify-between mt-10 md:gap-x-10  ">
+            <div class="mx-auto my-10 md:mt-0">
+
+                <img src="./hassan.jpg" alt=""
+                    class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform scale-150 w-44">
+                <h1 class="mt-16 text-3xl text-center ">Hassam Idress</h1>
+                <p class="text-sm text-center">Founder & Ceo</p>
+            </div>
+            <!-- <img src="./hassan.jpg" alt="" class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform hover:scale-110 w-44"> -->
+            <div class="flex mx-auto md:w-[50%] lg:w-auto mt-10 md:mt-0 justify-center flex-wrap items-center md:gap-10  gap-20">
+
+                <div>
+
+                    <img src="./hassan.jpg" alt=""
+                        class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform  hover:scale-110 w-44">
+                    <h1 class="mt-4 text-xl text-center ">Fahaid Ali</h1>
+                    <p class="text-sm text-center">Graphic Desioner</p>
+                </div>
+                <div>
+
+                    <img src="./hassan.jpg" alt=""
+                        class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform  hover:scale-110 w-44">
+                    <h1 class="mt-4 text-xl text-center ">Fahaid Ali</h1>
+                    <p class="text-sm text-center">Graphic Desioner</p>
+                </div>
+                <div>
+
+                    <img src="./hassan.jpg" alt=""
+                        class="border-2 border-[#c2ff00] rounded-full h-44 transition-transform duration-300 transform  hover:scale-110 w-44">
+                    <h1 class="mt-4 text-xl text-center ">Fahaid Ali</h1>
+                    <p class="text-sm text-center">Graphic Desioner</p>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="md:mx-16  mt-10">
+        <div class="border-y-2 flex justify-between lg:px-10 px-4 py-6 gap-y-10 justify-center items-center flex-wrap">
+            <div>
+                <h1 class='font-bold text-2xl'><span style=' color: #c2ff00' class=''>H</span>NWL</h1>
+            </div>
+            <div>
+                <h1 class="md:text-center text-[#c2ff00]">Need Project Help? </h1>
+                <h1>hassamnwl@gmail.com</h1>
+            </div>
+            <div>
+                <h1 class="text-center">Follow US</h1>
+                <div class=" text-2xl  flex flex-row gap-y-5 items-center">
+                    <i class='bx bxl-youtube text-white'></i>
+                    <i class='bx bxl-facebook text-white'></i>
+                    <i class='bx bxl-linkedin text-white'></i>
+                </div>
+            </div>
+        </div>
+        <div
+            class="flex justify-center lg:justify-between lg:gap-0 md:gap-10 lg:px-10 px-0 py-6 flex-wrap gap-y-10 gap-x-10">
+            <h1> Desgined by: @hassamnwl </h1>
+            <h1>Hassamnwl© Copyright 2024 All Rights Reserved </h1>
+            <h1 class="text-center"> Narowal, Punjab, Pakistan</h1>
+
+
+
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
